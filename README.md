@@ -1,13 +1,14 @@
-# Swar's Chia Plot Manager 
+# Swar's Chives Plot Manager 
 
-#### A plot manager for Chia plotting: https://www.chia.net/
-[English](README.md) / [Русский](README.RU.md)
+#### A plot manager for Chives plotting: https://chivescoin.org/
+[English](README.md) 
 
-![The view of the manager](https://i.imgur.com/hIhjXt0.png "View")
+![The view of the manager](chives-swar.jpg "View")
 
-##### Development Version: v0.1.1
+##### Development Version: v0.1.0
+## This is a fork of [Swar-Chia-Plot-Manager](https://github.com/swar/Swar-Chia-Plot-Manager) with support for Chives-blockchain
 
-This is a cross-platform Chia Plot Manager that will work on the major operating systems. This is not a plotter. The purpose of this library is to manage your plotting and kick off new plots with the settings that you configure. Everyone's system is unique so customization is an important feature that was engraved into this library.
+This is a cross-platform Chives Plot Manager that will work on the major operating systems. This is not a plotter. The purpose of this library is to manage your plotting and kick off new plots with the settings that you configure. Everyone's system is unique so customization is an important feature that was engraved into this library.
 
 This library is simple, easy-to-use, and reliable to keep the plots generating.
 
@@ -21,28 +22,24 @@ This library has been tested for Windows and Linux.
 * Utilize temporary space to its maximum potential by starting a new plot early.
 * Run a maximum number of plots concurrently to avoid bottlenecks or limit resource hogging.
 * More in-depth active plot screen.
-* Support MadMax and the new pooling protocol
 
 
 ## Sponsor / Support this Library
 
 This library took a lot of time and effort in order to get it before you today. Consider sponsoring or supporting the library. This is not necessary but more a kind gestures.
 
-* XCH Address: xch134evwwqkq50nnsmgehnnag4gc856ydc7ached3xxr6jdk7e8l4usdnw39t
-* ETH Address: 0xf8F7BD24B94D75E54BFD9557fF6904DBE239322E
-* BTC Address: 36gnjnHqkttcBiKjjAekoy68z6C3BJ9ekS
-* Paypal: https://www.paypal.com/biz/fund?id=XGVS7J69KYBTY
+* Chives Address: xcc1469m985nnwxs53rlmwc6335vc7zrtnkytyx574hxh3849gq2hc3qnp4xxl
+* XCH Address: xch1v67us350p74zk5dn4xmkmg352s8hyg3c6s8sk70sh83w6e7qddfq9yvdx6
+* ETH Address: 0xf8F7BD24B94D75E54BFD9557fF6904DBE239322E (for Swar)
+* BTC Address: 36gnjnHqkttcBiKjjAekoy68z6C3BJ9ekS (for Swar)
+* Paypal: https://www.paypal.com/biz/fund?id=XGVS7J69KYBTY (for Swar)
 
 
 ## Support / Questions
 
 Please do not use GitHub issues for questions or support regarding your own personal setups. Issues should pertain to actual bugs in the code and ideas. It has been tested to work on Windows, Linux, and Mac OS by numerous people at this point. So any questions relating to tech support, configuration setup, or things pertaining to your own personal use cases should be posted at any of the links below.
-* Discord Server: https://discord.gg/XyvMzeQpu2
-    * This is the Official Discord Server - Swar's Chia Community 
-* Official Chia Keybase Team: https://keybase.io/team/chia_network.public
-    * The channel is #swar 
-* GitHub Discussion Board: https://github.com/swar/Swar-Chia-Plot-Manager/discussions
-
+* Discord Server: https://discord.gg/x8p8bXA8
+    * This is the Official Discord Server of Chives 
 
 ## Frequently Asked Questions
 
@@ -114,14 +111,14 @@ The installation of this library is straightforward. I have attached detailed in
 1. Download and Install Python 3.7 or higher: https://www.python.org/
 2. `git clone` this repo or download it.
 3. Open CommandPrompt / PowerShell / Terminal and `cd` into the main library folder.
-   * Example: `cd C:\Users\Swar\Documents\Swar-Chia-Plot-Manager`
+   * Example: `cd C:\Users\Swar\Documents\Swar-Chives-Plot-Manager`
 4. OPTIONAL: Create a virtual environment for Python. This is recommended if you use Python for other things.
 	1. Create a new python environment: `python -m venv venv`
 	   * The second `venv` can be renamed to whatever you want. I prefer `venv` because it's a standard.
 	2. Activate the virtual environment. This must be done *every single time* you open a new window.
 	   * Example Windows: `venv\Scripts\activate`
 	   * Example Linux: `. ./venv/bin/activate` or `source ./venv/bin/activate`
-	   * Example Mac OS: `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon/chia`
+	   * Example Mac OS: `/Applications/Chives.app/Contents/Resources/app.asar.unpacked/daemon/chia`
 	3. Confirm that it has activated by seeing the `(venv)` prefix. The prefix will change depending on what you named it.
 5. Install the required modules: `pip install -r requirements.txt`
 	* If you plan on using Notifications or Prometheus then run the following to install the required modules: `pip install -r requirements-notification.txt`
@@ -140,17 +137,13 @@ The configuration of this library is unique to every end-user. The `config.yaml`
 
 This plot manager works based on the idea of jobs. Each job will have its own settings that you can configure and customize. No two drives are unique so this will provide flexibility for your own constraints and requirements.
 
-### chia_location
+### chives_location
 
-This is a single variable that should contain the location of your chia executable file. This is the blockchain executable.
+This is a single variable that should contain the location of your chives executable file. This is the blockchain executable.
 
-* Windows Example: `C:\Users\<USERNAME>\AppData\Local\chia-blockchain\app-1.1.2\resources\app.asar.unpacked\daemon\chia.exe`
-* Linux Example: `/usr/lib/chia-blockchain/resources/app.asar.unpacked/daemon/chia`
-* Another Linux Example: `/home/swar/chia-blockchain/venv/bin/chia`
-
-### backend
-
-This is where you signify if you are using Chia or the MadMax binary files for plotting.
+* Windows Example: `C:\Users\<USERNAME>\AppData\Local\chives-blockchain\app-1.1.900\resources\app.asar.unpacked\daemon\chives.exe`
+* Linux Example: `/usr/lib/chives-blockchain/resources/app.asar.unpacked/daemon/chives`
+* Another Linux Example: `/home/swar/chives-blockchain/venv/bin/chives`
 
 ### manager
 
@@ -212,12 +205,11 @@ Check for more details on the Chia CLI here: https://github.com/Chia-Network/chi
 * `name` - This is the name that you want to give to the job.
 * `max_plots` - This is the maximum number of jobs to make in one run of the manager. Any restarts to manager will reset this variable. It is only here to help with short term plotting.
 * [OPTIONAL]`farmer_public_key` - Your farmer public key. If none is provided, it will not pass in this variable to the chia executable which results in your default keys being used. This is only needed if you have chia set up on a machine that does not have your credentials.
-* [OPTIONAL] pool_public_key: Your pool public key. DONT Use IF YOU ARE USING A POOL CONTRACT ADDRESS! Othewise same information as above.
-* [OPTIONAL] pool_contract_address:  Your Pool's Contract Address. Refer to https://github.com/Chia-Network/chia-blockchain/wiki/Pooling-FAQ#how-do-i-assign-portable-plots-to-a-pool
+* [OPTIONAL]`pool_public_key` - Your pool public key. Same information as the above. 
 * `temporary_directory` - Can be a single value or a list of values. This is where the plotting will take place. If you provide a list, it will cycle through each drive one by one. These directories must be unique from one another.
 * [OPTIONAL]`temporary2_directory` - Can be a single value or a list of values. This is an optional parameter to use in case you want to use the temporary2 directory functionality of Chia plotting.
 * `destination_directory` - Can be a single value or a list of values. This is the final directory where the plot will be transferred once it is completed. If you provide a list, it will cycle through each drive one by one.  
-* `size` - This refers to the k size of the plot. You would type in something like 32, 33, 34, 35... in here.
+* `size` - This refers to the k size of the plot. You would type in something like 29, 30, 31.
 * `bitfield` - This refers to whether you want to use bitfield or not in your plotting. Typically, you want to keep this as true.
 * `threads` - This is the number of threads that will be assigned to the plotter. Only phase 1 uses more than 1 thread.
 * `buckets` - The number of buckets to use. The default provided by Chia is 128.
@@ -240,4 +232,4 @@ Check for more details on the Chia CLI here: https://github.com/Chia-Network/chi
 	* 128   `HIGH_PRIORITY_CLASS`
 	* 256   `REALTIME_PRIORITY_CLASS`
 * `enable_cpu_affinity` - Enable or disable cpu affinity for plot processes. Systems that plot and harvest may see improved harvester or node performance when excluding one or two threads for plotting process.
-* `cpu_affinity` - List of cpu (or threads) to allocate for plot processes. The default example assumes you have a hyper-threaded 4 core CPU (8 logical cores). This config will restrict plot processes to use logical cores 0-5, leaving logical cores 6 and 7 for other processes (6 restricted, 2 free). You have to specify all logical cores/threads that you wanted to use in this format [ 0, 1, 2, 3 ] and NOT [ 0-3 ] if you intend to use the first 4 logical cores.
+* `cpu_affinity` - List of cpu (or threads) to allocate for plot processes. The default example assumes you have a hyper-threaded 4 core CPU (8 logical cores). This config will restrict plot processes to use logical cores 0-5, leaving logical cores 6 and 7 for other processes (6 restricted, 2 free).

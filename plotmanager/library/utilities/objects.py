@@ -4,7 +4,6 @@ class Job:
 
     farmer_public_key = None
     pool_public_key = None
-    pool_contract_address = None
 
     total_running = 0
     total_kicked_off = 0
@@ -30,9 +29,7 @@ class Job:
     size = None
     bitfield = None
     threads = None
-    threadX_p2 = None
     buckets = None
-    buckets_p3 = None
     memory_buffer = None
 
     unix_process_priority = 10
